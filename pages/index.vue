@@ -1,12 +1,16 @@
 <template>
-  <h1>sdfsdfsd</h1>
+  <Header />
 </template>
 
 <script>
-export default {
-  async created () {
-    const db = await this.$fireStore
-    console.log('dbdddd', this);
+  import Header from '../components/header/Header'
+
+  export default {
+    components: {
+      Header,
+    },
+    async created() {
+      const db = await this.$fireStore
+    }
   }
-}
 </script>

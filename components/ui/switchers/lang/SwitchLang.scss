@@ -1,0 +1,48 @@
+@import "../../../../assets/scss/utils";
+
+.lang-switcher {
+  @include block(0,0,grid);
+  @include grid(24px 24px, 17px, 17px);
+  @include size(65px);
+  position: relative;
+  &::before {
+    content: "";
+    @include block();
+    @include size(1px, 24px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: $paragraph;
+    transform: translate(-50%, -50%);
+  }
+  &__item {
+    @include block(0,0,flex);
+    @include flex(row, flex-start, center);
+    @include size(24px, 24px);
+    @include font-montserrat(500, 16px, 1.5);
+    @include transition(all, 190ms, ease);
+    border: none;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    outline: none;
+    &:hover {
+      color: $bg-secondary;
+    }
+    &:active {
+      @include transition(all, 30ms, ease);
+      color: $primary;
+    }
+    &::selection {
+      @include color($primary-hover, $white);
+    }
+    &.current {
+      cursor: default;
+      color: $primary;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}

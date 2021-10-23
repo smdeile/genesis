@@ -1,0 +1,23 @@
+@import "../../assets/scss/utils";
+
+.site-header {
+  @include block(0 auto, 8px 0, block);
+  @include size(100%, 56px);
+  background: $bg-primary;
+  &-controls {
+    display: none;
+  }
+  &__wrap {
+    @include block(0 auto,8px 0,block);
+    @include size(100%, 56px);
+    background: $bg-primary;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: auto;
+    z-index: 900;
+  }
+  &-box {
+    @include block(0 auto,0,flex);
+    @include flex(row, space-between, center);
+    @include size();
+  }
+}
