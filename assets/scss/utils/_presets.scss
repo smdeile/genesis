@@ -1,0 +1,15 @@
+/*
+* Basic Presets
+* Containers, grids, titles etc.
+*/
+
+body {
+  @include font-montserrat();
+  color: $black;
+}
+
+.container {
+  @include block(0 auto, 0 10px, block);
+  @include size();
+  max-width: 1440px;
+}

@@ -1,5 +1,8 @@
 <template>
-  <Tutorial/>
+  <h1 class="container">
+    <div class="container__block">Hello work</div>
+  </h1>
+
 </template>
 
 <script>
@@ -9,3 +12,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  @import "assets/scss/index";
+ .container {
+   &__block {
+     @include flex(row, center, center);
+   }
+ }
+</style>

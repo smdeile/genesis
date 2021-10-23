@@ -1,0 +1,12 @@
+@import "utils/fonts";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/extends";
+@import "utils/reset";
+@import "utils/presets";
+
+@import "components/ui/ui-kit";
+
+body {
+  background: #CCCCCC;
+}
