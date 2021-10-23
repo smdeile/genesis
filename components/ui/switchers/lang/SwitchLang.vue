@@ -1,20 +1,21 @@
 <template>
   <div id="switch-lang" class="lang-switcher">
-    <div class="lang-switcher__item current">{{ lang.en }}</div>
-    <div class="lang-switcher__item">{{ lang.ua }}</div>
+    <div v-for="lang in $i18n.locales"
+         :key="lang.code"
+         @click="changeLang($i18n, lang.code)"
+         :class="`lang-switcher__item ${$i18n.locale === lang.code ? 'current' : ''}`"
+    >
+      {{ lang.name }}
+    </div>
   </div>
 </template>
 
 <script>
-  // [ EN, UA ]
   export default {
     name: 'SwitchLang',
-    data() {
-      return {
-        lang: {
-          en: 'EN',
-          ua: 'UA',
-        }
+    methods: {
+      changeLang(i18n, code) { // [ en, ru ]
+        return i18n.locale = code
       }
     }
   }

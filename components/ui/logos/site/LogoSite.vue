@@ -1,7 +1,5 @@
 <template>
-  <a :href="href" class="site-logo">
-    Fast Events
-  </a>
+  <a :href="href" class="site-logo">Fast Events</a>
 </template>
 
 <script>

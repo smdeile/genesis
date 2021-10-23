@@ -2,7 +2,7 @@
   <a :id="id"
      :href="href"
      class="btn-login">
-    {{ text }}
+    {{ $t('login') }}
   </a>
 </template>
 
@@ -13,10 +13,6 @@
       id: {
         type: String,
         default: 'btn-login',
-      },
-      text: {
-        type: String,
-        default: 'Log In',
       },
       href: {
         type: String,

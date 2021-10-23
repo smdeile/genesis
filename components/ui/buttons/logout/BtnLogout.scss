@@ -1,6 +1,6 @@
 @import "../../../../assets/scss/utils";
 
-.btn-login {
+.btn-logout {
   @include block(0,8px 16px,inline-flex);
   @include color(transparent, $primary);
   @include flex(row, center, center);
@@ -32,7 +32,7 @@
 }
 
 @include media_768 {
-  .btn-login {
+  .btn-logout {
     @include color(transparent, $white);
     border: 1px solid $white;
     padding: 7px 16px;

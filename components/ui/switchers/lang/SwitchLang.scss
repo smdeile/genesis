@@ -27,6 +27,7 @@
     text-transform: uppercase;
     text-align: left;
     outline: none;
+    cursor: pointer;
     &:hover {
       color: $bg-secondary;
     }

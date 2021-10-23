@@ -7,7 +7,7 @@
   @include font-montserrat(700, 16px, 1.5);
   @include transition(all, 190ms, ease);
   border-radius: 8px;
-  text-decoration: none;
+  text-decoration: none !important;
   text-transform: none;
   text-align: center;
   outline: none;

@@ -52,7 +52,7 @@
     animation: showMenu 220ms ease forwards;
     opacity: 1;
   }
-  &-controls {
+  .header-menu-controls {
     @include block(0 auto, 16px 0 16px 16px, flex);
     @include size();
     @include flex(row, space-between, center);
@@ -107,6 +107,96 @@
     &__btn {
       width: 100%;
       max-width: 304px;
+    }
+  }
+}
+
+@include media_768 {
+  .header-menu {
+    padding: 0;
+    .header-menu-link {
+      display: none;
+    }
+    .header-menu-controls {
+      display: none;
+    }
+    .header-menu-list {
+      @include block(0 auto,16px 0,flex);
+      @include flex(row, center, center);
+      @include size();
+      flex-wrap: wrap;
+      li {
+        @include block(0 32px 0 0,0,inline-flex);
+        @include flex(row, flex-start, center);
+        @include size(auto);
+        &:first-child {
+          margin-left: 32px;
+        }
+      }
+    }
+    &.nl {
+      .header-menu-list {
+        li {
+          margin-right: 10px;
+          &:first-child {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media_1024 {
+  .header-menu {
+    display: inline-flex;
+    width: auto;
+    position: static;
+    animation: none;
+    max-height: none;
+    min-height: 0;
+    transform: translateX(0) translateY(0) scaleY(1) scaleX(1);
+    opacity: 1;
+    background: transparent;
+    &.active {
+      animation: none;
+      max-height: none;
+      min-height: 0;
+      transform: translateX(0) translateY(0) scaleY(1) scaleX(1);
+      opacity: 1;
+      .header-menu-list {
+        max-height: none;
+        min-height: 0;
+        transform: translateX(0) translateY(0) scaleY(1) scaleX(1);
+        opacity: 1;
+        animation: none;
+      }
+    }
+    &.hidden {
+      animation: none;
+      max-height: none;
+      min-height: 0;
+      transform: translateX(0) translateY(0) scaleY(1) scaleX(1);
+      opacity: 1;
+    }
+    .header-menu-list {
+      @include block(0,0,grid);
+      @include grid(repeat(6, auto), 25px, 15px);
+      @include size(auto);
+      animation: none;
+      max-height: none;
+      min-height: 0;
+      transform: translateX(0) translateY(0) scaleY(1) scaleX(1);
+      opacity: 1;
+      background: transparent;
+      border-top: none;
+      border-bottom: none;
+      li {
+        &:first-child {
+          margin: 0;
+        }
+        margin: 0;
+      }
     }
   }
 }
