@@ -17,7 +17,7 @@ export default {
   @import "assets/scss/index";
  .container {
    &__block {
-     @include flex(row, center, center);
+
    }
  }
 </style>

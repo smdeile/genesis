@@ -1,0 +1,282 @@
+/*
+* Application fonts
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
+/* Colors */
+/* Media queries */
+/*
+* Reset old browsers CSS configuration
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.55;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*
+* Basic Presets
+* Containers, grids, titles etc.
+*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  font-style: normal;
+  color: #121212;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  max-width: 1440px;
+}
+
+/* UI kit components */
+.btn-primary {
+  display: inline-flex;
+  margin: 0;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background: #00AAEE;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: normal;
+  transition: all 190ms ease;
+  -webkit-transition: all 190ms ease;
+  -moz-transition: all 190ms ease;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: #1976D2;
+  color: #FFFFFF;
+}
+.btn-primary:active {
+  transition: none;
+  background: #00AAEE;
+  color: #FFFFFF;
+}
+.btn-primary:disabled {
+  background: #FFFFFF;
+  color: #CEDCE3;
+  cursor: not-allowed;
+  pointer-events: none;
+  border: 1px solid rgba(55, 71, 79, 0.5);
+}
+.btn-primary::selection {
+  background: #FFA608;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  margin: 0;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  background: transparent;
+  color: #00AAEE;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: normal;
+  transition: all 190ms ease;
+  -webkit-transition: all 190ms ease;
+  -moz-transition: all 190ms ease;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  outline: none;
+  border: 1px solid #00AAEE;
+  box-shadow: none;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background: #1976D2;
+  color: #FFFFFF;
+}
+.btn-secondary:active {
+  transition: all 30ms ease;
+  -webkit-transition: all 30ms ease;
+  -moz-transition: all 30ms ease;
+  background: #00AAEE;
+  color: #FFFFFF;
+}
+.btn-secondary:disabled {
+  background: #FFFFFF;
+  color: #CEDCE3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.btn-secondary::selection {
+  background: #FFA608;
+  color: #FFFFFF;
+}
+
+.btn-burger {
+  display: flex;
+  margin: 0 0 0 32px;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: #FFFFFF;
+  overflow: hidden;
+  max-width: 40px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: none;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none;
+  cursor: pointer;
+}
+.btn-burger__line {
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 30px;
+  height: 3px;
+  background: #FFFFFF;
+  color: #FFFFFF;
+  transition: all 190ms ease;
+  -webkit-transition: all 190ms ease;
+  -moz-transition: all 190ms ease;
+  max-width: 30px;
+  min-height: 3px;
+  transform: translateX(0) translateY(0) rotate(0);
+}
+.btn-burger__line.top {
+  transform: translateX(0) translateY(0) rotate(0);
+}
+.btn-burger__line.middle {
+  transform: translateX(0) translateY(0) rotate(0);
+  opacity: 1;
+}
+.btn-burger__line.bottom {
+  transform: translateX(0) translateY(0) rotate(0);
+}
+.btn-burger.active .btn-burger__line.top {
+  transform: translateX(0) translateY(7.5px) rotate(45deg);
+}
+.btn-burger.active .btn-burger__line.middle {
+  transform: translateX(-45px) translateY(0) rotate(0);
+  opacity: 0;
+}
+.btn-burger.active .btn-burger__line.bottom {
+  transform: translateX(0) translateY(-8.5px) rotate(-45deg);
+}
+
+body {
+  background: #cecece;
+}
+
+/*# sourceMappingURL=index.css.map */
