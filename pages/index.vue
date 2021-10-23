@@ -3,10 +3,21 @@
 </template>
 
 <script>
+import { doc, setDoc } from "firebase/firestore";
 export default {
   async created () {
-    const db = await this.$fireStore
-    console.log('dbdddd', this);
+    this.writeToFirestore(),
+    this.readFromFirestore()
+  },
+  mounted() {
+    console.log(this.$store);
+  },
+
+  methods: {
+
+  },
+  async created () {
+    
   }
 }
 </script>
