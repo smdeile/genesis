@@ -1,23 +1,12 @@
 <template>
-  <h1 class="container">
-    <div class="container__block">Hello work</div>
-  </h1>
-
+  <h1>sdfsdfsd</h1>
 </template>
 
 <script>
 export default {
-  created () {
-    console.log(this.$fire)
+  async created () {
+    const db = await this.$fireStore
+    console.log('dbdddd', this);
   }
 }
 </script>
-
-<style lang="scss">
-  @import "assets/scss/index";
- .container {
-   &__block {
-
-   }
- }
-</style>
