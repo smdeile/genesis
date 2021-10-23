@@ -18,10 +18,6 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // CSS file in the project
-    '~/assets/css/index.css',
-    // SCSS file in the project
-    '~/assets/scss/index.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -52,7 +48,10 @@ export default {
           measurementId: "G-19FH5ECVCF"
         },
         services: {
-          auth: true // Just as example. Can be any other service.
+          auth: true, // Just as example. Can be any other service.
+          storage: true,
+          database: true,
+          firestore: true
         }
       }
     ]

@@ -1,16 +1,23 @@
 <template>
-  <Header />
+  <h1>sdfsdfsd</h1>
 </template>
 
 <script>
-  import Header from '../components/header/Header'
+import { doc, setDoc } from "firebase/firestore";
+export default {
+  async created () {
+    this.writeToFirestore(),
+    this.readFromFirestore()
+  },
+  mounted() {
+    console.log(this.$store);
+  },
 
-  export default {
-    components: {
-      Header,
-    },
-    async created() {
-      const db = await this.$fireStore
-    }
+  methods: {
+
+  },
+  async created () {
+    
   }
+}
 </script>
