@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header />
+    <HomeBanner />
     <Events />
     <PopupLogin v-if="$store.state.isPopupSignIn" />
     <PopupSignup v-if="$store.state.isPopupSignUp" />
