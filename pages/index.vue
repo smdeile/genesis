@@ -4,6 +4,7 @@
     <Events />
     <PopupLogin v-if="$store.state.isPopupSignIn" />
     <PopupSignup v-if="$store.state.isPopupSignUp" />
+    <Footer />
   </div>
 </template>
 
@@ -12,13 +13,19 @@ import Events from "../components/Events/Events";
 import Header from "../components/header/Header";
 import PopupLogin from "../components/parts/popups/login/PopupLogin";
 import PopupSignup from "../components/parts/popups/PopupSignUp";
+import HomeBanner from "../components/HomeBanner/HomeBanner";
+import Footer from "../components/Footer/Footer";
+
 
 export default {
   components: {
+    PopupLogin,
     Events,
     Header,
     PopupLogin,
-    PopupSignup
+    PopupSignup,
+    HomeBanner,
+    Footer
   },
   data() {
     return {
