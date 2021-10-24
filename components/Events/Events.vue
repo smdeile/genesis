@@ -1,12 +1,16 @@
 <template>
-  <div class="events container">
-    <event-card></event-card>
-    <event-card></event-card>
-    <event-card></event-card>
-    <event-card></event-card>
-    <event-card></event-card>
-    <event-card></event-card>
-  </div>
+  <section class="events">
+    <div class="app-container">
+      <div class="events__grid">
+        <event-card></event-card>
+        <event-card></event-card>
+        <event-card></event-card>
+        <event-card></event-card>
+        <event-card></event-card>
+        <event-card></event-card>
+      </div>
+    </div>
+  </section>
 
 </template>
 
