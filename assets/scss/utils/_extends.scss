@@ -1,0 +1,22 @@
+%title {
+  @include block(0 auto, 0, block);
+  @include size();
+  @include font-montserrat(800, 24px, 1.34);
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  color: $bg-primary;
+}
+
+%input-default {
+  @include font-montserrat(500, 16px, 1.5);
+  @include border($bg-01);
+  @include transition();
+  border-radius: $input-radius;
+  color: $bg-primary;
+  outline: none !important;
+  &::placeholder {
+    color: $paragraph;
+  }
+}
+

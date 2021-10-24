@@ -8,11 +8,14 @@
 <script>
 import Events from '../components/Events/Events'
 import Header from '../components/header/Header'
+import PopupLogin from '../components/parts/popups/login/PopupLogin'
+import Events from '../components/Events/Events';
 
 export default {
   components: {
+    Events,
     Header,
-    Events
+    PopupLogin,
   },
   async created () {
     this.writeToFirestore(),
