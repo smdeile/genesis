@@ -3,11 +3,10 @@
 
     <setion class="home-banner">
       <div class="home-banner__text">
-        <h1> Fast event</h1>
+        <h1> Fast Event</h1>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco. </p>
-        <a class="btn-primary"> Learn More </a>
 
         <div @click="scrollElement('events')" class="mouse">
           <div class="wheel"></div>
