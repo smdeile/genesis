@@ -15,22 +15,11 @@
           <span>{{ cardDate }}</span> / <span>{{ cardTime }}</span>
         </div>
       </div>
-<<<<<<< HEAD
-      <div class="event-card__content-descr">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Asperiores aspernatur at consequuntur deleniti dignissimos doloribus</p>
-      </div>
-      <div class="event-card__content-button">
-        <button class="btn-primary" @click="runToPage(card.id)">
-          {{ $t('more') }}
-        </button>
-=======
       <div class="event-card__space">
         <div class="event-card__description">{{ cardInfo }}</div>
         <div class="event-card__content-button">
           <button class="btn-primary" @click="runToPage(card.id)">{{ $t('more') }}</button>
         </div>
->>>>>>> 27dfabf6e081c4748499f2db2d7e7788fdf21823
       </div>
     </div>
   </div>
