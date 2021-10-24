@@ -22,7 +22,7 @@ export default {
     this.readFromFirestore()
   },
   mounted() {
-    console.log(this.$store);
+    console.log(this.$store.state.events);
   },
 
   methods: {

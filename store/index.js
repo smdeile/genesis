@@ -1,7 +1,8 @@
 
 
 export const state = () => ({
-  events: []
+  events: [],
+  activeEvent: ''
 })
 
 export const getters = {
@@ -10,8 +11,6 @@ export const getters = {
 
 export const actions = {
   async nuxtServerInit ({ dispatch, commit }, { req, res }) {
-
-    console.log('sdfsdfsdfsdfsdfsdf1111111111111111');
     await dispatch('GET_EVENTS')
   }
 }
