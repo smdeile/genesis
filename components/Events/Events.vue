@@ -8,6 +8,7 @@
                    :key="card.id"
         />
       </div>
+
     </div>
   </section>
 
