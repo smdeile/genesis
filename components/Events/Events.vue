@@ -11,7 +11,9 @@
 
     </div>
     <div class="app-container">
-      <button class="btn-secondary events__show-more" @click="showMore">Show more events</button>
+      <button v-if="!isHidden"
+              class="btn-secondary events__show-more"
+              @click="showMore">{{ $t('showMore') }}</button>
     </div>
   </section>
 
@@ -30,14 +32,15 @@ export default {
       pagStep: 1,
       cardsLen: 0,
       cardsCount: 6,
-      cards: []
+      cards: [],
+      isHidden: false,
     }
   },
   mounted() {
-    this.getCards(this.$store.state.events)
-    console.log('cards: ', this.cards);
-    this.getCardsCount(this.$store.state.events)
-    console.log('cards len: ', this.cardsLen);
+    const storeCards = this.$store.state.events
+    const slicedCards = storeCards.slice(0, this.cardsCount)
+    this.getCards([...slicedCards])
+    this.getCardsCount(storeCards)
   },
   methods: {
     getCardsCount(cardStore) {
@@ -47,13 +50,19 @@ export default {
       this.cards = cardStore
     },
     showMore() {
-      this.pagStep = this.pagStep + 1;
-      console.log('PAGINATION STEP: ', this.pagStep)
+      const start = this.cardsCount * this.pagStep
+      this.pagStep = this.pagStep + 1
+      const end = this.pagStep*this.cardsCount
+      if (end >= this.cardsLen) this.isHidden = true
+      this.cards = [
+        ...this.cards,
+        ...this.$store.state.events.slice(start, end)
+      ]
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-@import "Events";
+  @import "Events";
 </style>
