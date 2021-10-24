@@ -6,12 +6,9 @@ export default {
         mail,
         password
       )
-      console.log(
-        '222222222222222', data
-      );
       return data
     } catch (e) {
-      console.log('dsdfsfs', e);
+      console.log('catch error', e);
     }
   },
   async SIGNIN_USER({commit}, { mail, password }) {
@@ -20,7 +17,6 @@ export default {
         mail,
         password
       )
-      console.log('33333333333333333', data);
 
       return data
     } catch (e) {

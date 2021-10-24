@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     cardImg() {
-      return this.card.images[0].url
+      return this.card.images[2].url
     },
     cardInfo() {
       if (typeof this.card.info !== 'undefined') {
