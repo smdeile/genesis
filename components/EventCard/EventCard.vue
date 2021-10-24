@@ -1,13 +1,12 @@
 <template>
-
-  <div class="event-card">
+  <div v-if="typeof card !== 'undefined'" class="event-card">
     <div class="event-card__img">
-      <img src="https://exit.al/en/wp-content/uploads/sites/3/2020/03/banner-1.jpg" alt="">
+      <img :src="cardImg" :alt="card.id" />
     </div>
     <div class="event-card__content">
-      <h2 class="event-card__content-title">
-        На краю океана </h2>
+      <h2 class="event-card__content-title">{{ card.name }}</h2>
       <div class="event-card__content-date">
+        <span>New York</span>
         <span>30 июля 20: 00</span>
       </div>
       <div class="event-card__content-descr">
@@ -15,7 +14,7 @@
           Asperiores aspernatur at consequuntur deleniti dignissimos doloribus</p>
       </div>
       <div class="event-card__content-button">
-        <a href="#" class="btn-primary">Посмотреть</a>
+        <button class="btn-primary" @click="runToPage(card.id)">{{ $t('more') }}</button>
       </div>
     </div>
   </div>
@@ -25,12 +24,24 @@
 
 <script>
 export default {
-  name: "EventCard"
+  name: "EventCard",
+  props: {
+    card: Object,
+  },
+  methods: {
+    runToPage(id) {
+      this.$router.push(`/event/${id}`)
+    }
+  },
+  computed: {
+    cardImg() {
+      return this.card.images[0].url
+    }
+  }
 }
 </script>
 
 <style scoped lang="sass">
-
   @import "assets/scss/index"
   @import "EventCard"
 </style>

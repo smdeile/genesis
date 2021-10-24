@@ -1,7 +1,7 @@
 <template>
   <div id="#app">
     <Header />
-    <PopupLogin />
+    <Events />
   </div>
 </template>
 
@@ -9,9 +9,11 @@
 import { doc, setDoc } from 'firebase/firestore'
 import Header from '../components/header/Header'
 import PopupLogin from '../components/parts/popups/login/PopupLogin'
+import Events from '../components/Events/Events';
 
 export default {
   components: {
+    Events,
     Header,
     PopupLogin,
   },
