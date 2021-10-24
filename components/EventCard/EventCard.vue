@@ -14,7 +14,9 @@
           Asperiores aspernatur at consequuntur deleniti dignissimos doloribus</p>
       </div>
       <div class="event-card__content-button">
-        <button class="btn-primary" @click="runToPage(card.id)">{{ $t('more') }}</button>
+        <button class="btn-primary" @click="runToPage(card.id)">
+          {{ $t('more') }}
+        </button>
       </div>
     </div>
   </div>
