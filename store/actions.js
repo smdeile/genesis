@@ -1,13 +1,30 @@
 export default {
-  async CREATE_USER(commit) {
+  async CREATE_USER({commit}, { mail, password }) {
     try {
-      console.log('startnpm');
-      await this.$fire.auth.createUserWithEmailAndPassword(
-        '1111@d.com',
-        '222222'
+      console.log('startnpm', mail, password);
+      const data = await this.$fire.auth.createUserWithEmailAndPassword(
+        mail,
+        password
       )
+      console.log(
+        '222222222222222', data
+      );
+      return data
     } catch (e) {
-      console.log('dsdfsfs');
+      console.log('dsdfsfs', e);
+    }
+  },
+  async SIGNIN_USER({commit}, { mail, password }) {
+    try {
+      const data = await this.$fire.auth.signInWithEmailAndPassword(
+        mail,
+        password
+      )
+      console.log('33333333333333333', data);
+
+      return data
+    } catch (e) {
+      console.log(e)
     }
   },
   async WRITE_TO_FIRESTORE (commit) {

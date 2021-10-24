@@ -2,7 +2,10 @@
 
 export const state = () => ({
   events: [],
-  activeEvent: ''
+  activeEvent: '',
+  isPopupSignUp: false,
+  isPopupSignIn: false,
+  loggedUser: null
 })
 
 export const getters = {

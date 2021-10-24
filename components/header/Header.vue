@@ -4,14 +4,15 @@
       <div class="app-container">
         <div class="site-header-box">
           <LogoSite />
-          <Navigation :isOpenMenu="isOpenMenu" :isAuth="isAuth" />
+          <Navigation :isOpenMenu="isOpenMenu" :isAuth="!!$store.state.loggedUser" />
           <div class="site-header-box__settings">
             <div class="site-header-controls">
               <SwitchLang class="site-header-controls__switcher" />
-              <BtnLogout v-if="isAuth" />
-              <BtnLogin v-else />
-              <BtnAccount v-if="isAuth" class="site-header-controls__order" />
-              <BtnSignUp v-else class="site-header-controls__order" />
+              <BtnLogout v-show="!!$store.state.loggedUser" :onClick="onLogout"/>
+              <BtnLogin v-show="!$store.state.loggedUser" :onClick="onSignIn"/>
+              <BtnAccount v-show="!!$store.state.loggedUser" class="site-header-controls__order" />
+              <BtnSignUp v-show="!$store.state.loggedUser"
+              class="site-header-controls__order" :onClick="onSignUp" />
             </div>
             <BtnBurger :handleClick="toggleMenu"
                        :isOpenMenu="isOpenMenu"
@@ -37,8 +38,7 @@
     name: 'Header',
     data() {
       return {
-        isOpenMenu: false,
-        isAuth: false,
+        isOpenMenu: false      
       }
     },
     components: {
@@ -60,6 +60,15 @@
     methods: {
       toggleMenu() {
         this.isOpenMenu = !this.isOpenMenu;
+      },
+      onSignUp () {
+        this.$store.commit('IS_POPUP_SIGNUP',true)
+      },
+      onSignIn () {
+        this.$store.commit('IS_POPUP_SIGNIN',true)
+      },
+      async onLogout () {
+        this.$store.commit('LOGGED_USER')
       }
     }
   }
