@@ -8,6 +8,7 @@
                    :key="card.id"
         />
       </div>
+
     </div>
     <div class="app-container">
       <button class="btn-secondary events__show-more" @click="showMore">Show more events</button>
