@@ -8,5 +8,11 @@
 @import "components/ui/ui-kit";
 
 body {
-  background: #fff;
+  background: $white;
+  &::-webkit-scrollbar-track {border-radius: 4px; background: rgba($bg-01, .8);}
+  &::-webkit-scrollbar {width: 6px;}
+  &::-webkit-scrollbar-thumb {border-radius: 4px;background: rgba($primary-hover, .8);}
+  &:hover::-webkit-scrollbar-thumb {background: rgba($primary-hover, .8);}
 }
+
+
