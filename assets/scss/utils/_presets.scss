@@ -8,7 +8,7 @@ body {
   color: $black;
 }
 
-.container {
+.app-container {
   @include block(0 auto, 0 10px, block);
   @include size();
   max-width: 1440px;
