@@ -7,7 +7,7 @@
   @include color($primary, $white);
   @include font-montserrat(400, 16px, 1.5);
   @include transition(all, 190ms, ease);
-  border-radius: 2px;
+  border-radius: 4px;
   text-decoration: none !important;
   text-transform: none;
   text-align: center;

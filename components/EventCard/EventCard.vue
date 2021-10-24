@@ -1,6 +1,6 @@
 <template>
   <div v-if="typeof card !== 'undefined'" class="event-card">
-    <div class="event-card__img">
+    <div class="event-card__img" @click="runToPage(card.id)">
       <img :src="cardImg"
            :alt="card.id"
       />
