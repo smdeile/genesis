@@ -1,0 +1,69 @@
+
+@import "../assets/scss/utils";
+
+.event-inner{
+  font-family: "Montserrat", sans-serif;
+  &__banner {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('https://s1.ticketm.net/dam/a/c62/0636ff21-e369-4b8c-bee4-214ea0a81c62_1339761_CUSTOM.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    @media screen and (min-width: 768px){
+      height: 400px;
+    }
+    &-text {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      padding: 0 10px;
+      h1 {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 30px;
+        color: white;
+        @media screen and (min-width: 768px){
+          font-size: 45px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+  &__content{
+    padding: 20px 20px;
+    margin: 40px auto;
+    background: #eee;
+    max-width: 800px;
+    width: 100%;
+    @media screen and (min-width: 768px){
+      padding: 20px 40px;
+    }
+    .content-wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .content-descr{
+      padding: 20px 0;
+      text-align: center;
+      p{
+        margin: 15px 0;
+        text-align: left;
+      }
+      img{
+        max-width: 300px;
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+}
