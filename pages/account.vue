@@ -1,13 +1,12 @@
 <template>
   <div>
-d/g,d'fg
+    This is Cab
   </div>
 </template>
 
 <script>
   export default {
-    async asyncData(config, { params, redirect }) {
-    }
+    
   }
 </script>
 
