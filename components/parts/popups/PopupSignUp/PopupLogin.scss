@@ -8,14 +8,7 @@
   left: 50%; top: 50%;
   transform: translate(-50%, -50%);
   max-width: 400px;
-
   &-box {
-    position: relative;
-    @include block(0 auto, 24px 16px 30px, block);
-    @include size();
-    box-shadow: 0 8px 24px rgba($shadow, .48);
-    background-color: $white;
-    border-radius: 8px;
     &_close {
       width: 25px;
       height: 25px;
@@ -27,6 +20,11 @@
       align-items: center;
       justify-content: center;
     }
+    @include block(0 auto, 24px 16px 30px, block);
+    @include size();
+    box-shadow: 0 8px 24px rgba($shadow, .48);
+    background-color: $white;
+    border-radius: 8px;
   }
   &__title {
     @extend %title;
