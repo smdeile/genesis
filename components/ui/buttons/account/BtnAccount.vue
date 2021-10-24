@@ -1,7 +1,7 @@
 <template>
-  <a href="#" class="btn-primary header-menu-link__btn">
+  <nuxt-link to="account" class="btn-primary header-menu-link__btn">
     {{ $t('account') }}
-  </a>
+  </nuxt-link>
 </template>
 
 <script>

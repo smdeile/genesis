@@ -61,8 +61,15 @@
       }
     },
     async asyncData({params, store, id}) {
+<<<<<<< HEAD
+      // store.commit('SET_ACTIVE_EVENT', params.id)
+      const data = await store.dispatch('GET_CATALOG_ITEM', { id: params.id })
+      console.log('222222222222222222222222', data);
+      return {id: params.id}
+=======
       const data = await store.dispatch('GET_CATALOG_ITEMS', { id: params.id })
       return { id: params.id }
+>>>>>>> a76179b4b7b84690194544dd5542bcd82900f7db
     }
   }
 </script>

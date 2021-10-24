@@ -8,7 +8,7 @@
     </div>
     <ul id="menu-en-header-menu" class="header-menu-list">
       <li v-for="menu in menus" :key="menu.name" class="menu-item">
-        <a :href="menu.link">{{ $t(menu.name) }}</a>
+        <nuxt-link :to="menu.link">{{ $t(menu.name) }}</nuxt-link>
       </li>
     </ul>
     <div class="header-menu-link">
@@ -31,7 +31,7 @@
       return {
         menus: [
           {
-            link: '#',
+            link: '/',
             name: 'home',
           },
           {

@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <setion class="home-banner">
+    <section class="home-banner">
       <div class="home-banner__text">
         <h1>Fast events</h1>
         <p>Узнавайте самые актуальные спортивные события на нашем ресурсе</p>
@@ -11,7 +11,7 @@
           <div class="wheel"></div>
         </div>
       </div>
-    </setion>
+    </section>
 
 
     <div id="events" class="app-title">
