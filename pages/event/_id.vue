@@ -16,7 +16,7 @@
 
     async asyncData({params, store, id}) {
       // store.commit('SET_ACTIVE_EVENT', params.id)
-      const data = await store.dispatch('GET_CATALOG_ITEMS', { id: params.id })
+      const data = await store.dispatch('GET_CATALOG_ITEM', { id: params.id })
       console.log('222222222222222222222222', data);
       return {id: params.id}
     }

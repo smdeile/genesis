@@ -3,7 +3,9 @@
     <div id="site-header-wrap" class="site-header__wrap">
       <div class="app-container">
         <div class="site-header-box">
-          <LogoSite />
+          <nuxt-link to="/">
+            <LogoSite />
+          </nuxt-link>
           <Navigation :isOpenMenu="isOpenMenu" :isAuth="!!$store.state.loggedUser" />
           <div class="site-header-box__settings">
             <div class="site-header-controls">

@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <setion class="home-banner">
+    <section class="home-banner">
       <div class="home-banner__text">
         <h1> Fast event</h1>
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -13,7 +13,7 @@
           <div class="wheel"></div>
         </div>
       </div>
-    </setion>
+    </section>
 
 
     <div id="events"  class="app-title">
