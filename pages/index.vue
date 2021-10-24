@@ -1,16 +1,18 @@
 <template>
   <div id="#app">
     <Header />
+    <Events />
   </div>
 </template>
 
 <script>
-import { doc, setDoc } from 'firebase/firestore'
+import Events from '../components/Events/Events'
 import Header from '../components/header/Header'
 
 export default {
   components: {
-    Header
+    Header,
+    Events
   },
   async created () {
     this.writeToFirestore(),
