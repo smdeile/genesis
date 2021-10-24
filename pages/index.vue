@@ -1,5 +1,5 @@
 <template>
-  <div id="#app">
+  <div id="app">
     <Header />
     <HomeBanner />
     <Events/>
@@ -8,13 +8,15 @@
 </template>
 
 <script>
-import { doc, setDoc } from 'firebase/firestore'
 import Header from '../components/header/Header'
 import HomeBanner from "../components/HomeBanner/HomeBanner";
 import Events from "../components/Events/Events";
 import Footer from "../components/Footer/Footer";
+import PopupLogin from '../components/parts/popups/login/PopupLogin'
+
 export default {
   components: {
+    PopupLogin,
     Events,
     Header,
     HomeBanner,
@@ -25,7 +27,7 @@ export default {
     this.readFromFirestore()
   },
   mounted() {
-    console.log(this.$store);
+    console.log(this.$store.state.events);
   },
 
   methods: {

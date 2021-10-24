@@ -25,3 +25,7 @@ body {
     font-weight: 500;
   }
 }
+
+.h2 {
+  @extend %title;
+}

@@ -1,4 +1,3 @@
-import { GET_EVENTS } from './actionsType'
 export default {
   async CREATE_USER(commit) {
     try {
@@ -43,14 +42,23 @@ export default {
       console.log(e)
     }
   },
-  async [GET_EVENTS] ({commit}) {
+  async GET_EVENTS ({commit}) {
     console.log('commit', commit);
     try {
       const {data} = await this.$axios.get('https://app.ticketmaster.com/discovery/v2/events.json?apikey=slRO9G0Yog3XrEAZLfui1VjL2bFUAhBo')
-      console.log('events', data._embedded.events);
       commit('SET_EVENTS', data._embedded.events)
     } catch (error) {
       console.log('error', error);
     }
-  }
+  },
+
+  async GET_CATALOG_ITEMS ({ commit }, { id }) {
+    try {
+      const {data} = await this.$axios.get(`https://app.ticketmaster.com/discovery/v2/events/${id}.json?apikey=slRO9G0Yog3XrEAZLfui1VjL2bFUAhBo`)
+      commit('SET_ACTIVE_EVENT', data)
+      return data
+    } catch (e) {
+      console.log(e)
+    }
+  },
 }
