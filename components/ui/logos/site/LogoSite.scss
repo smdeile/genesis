@@ -1,0 +1,13 @@
+@import "../../../../assets/scss/utils";
+
+.site-logo {
+  @include block(0,0,flex);
+  @include flex(row, flex-start, center);
+  @include size(120px, 32px);
+  @include color(transparent, $white);
+  max-width: 120px;
+  &__img {
+    @include size(100%, 100%);
+    max-width: 120px;
+  }
+}

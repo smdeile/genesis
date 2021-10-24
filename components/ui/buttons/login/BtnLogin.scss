@@ -1,0 +1,49 @@
+@import "../../../../assets/scss/utils";
+
+.btn-login {
+  @include block(0,8px 16px,inline-flex);
+  @include color(transparent, $primary);
+  @include flex(row, center, center);
+  @include size(auto);
+  @include font-montserrat(700, 16px, 1.5);
+  @include transition(all, 190ms, ease);
+  text-align: center;
+  text-decoration: none !important;
+  text-transform: none;
+  border-radius: 8px;
+  border: none;
+  max-height: 40px;
+  &:hover {
+    color: $primary-hover;
+  }
+  &:active {
+    transition: none;
+    color: $primary;
+  }
+  &:disabled {
+    @include color($white, $bg-01);
+    border: 1px solid $white;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  &::selection {
+    @include color(#FFA608, $white);
+  }
+}
+
+@include media_768 {
+  .btn-login {
+    @include color(transparent, $white);
+    border: 1px solid $white;
+    padding: 7px 16px;
+    &:hover {
+      @include color($primary-hover, $white);
+      border: 1px solid $primary-hover;
+    }
+    &:active {
+      transition: none;
+      @include color($primary, $white);
+      border: 1px solid $primary;
+    }
+  }
+}

@@ -1,13 +1,14 @@
 // Primary button
+
 .btn-primary {
   @include block(0,8px 16px,inline-flex);
   @include flex(row, center, center);
-  @include size(180px, 51px);
+  @include size(auto);
   @include color($primary, $white);
   @include font-montserrat(400, 16px, 1.5);
   @include transition(all, 190ms, ease);
-  border-radius: 0px;
-  text-decoration: none;
+  border-radius: 2px;
+  text-decoration: none !important;
   text-transform: none;
   text-align: center;
   outline: none;

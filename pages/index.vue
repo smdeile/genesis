@@ -1,29 +1,34 @@
 <template>
-  <div>
-    <h1>sdfsdfsd</h1>
-    <Events/>
+  <div id="#app">
+    <Header />
   </div>
-
 </template>
 
 <script>
-import Events from "../components/Events/Events";
+import { doc, setDoc } from 'firebase/firestore'
+import Header from '../components/header/Header'
+
 export default {
   components: {
-    Events
+    Header
   },
   async created () {
-    const db = await this.$fireStore
-    console.log('dbdddd', this);
+    this.writeToFirestore(),
+    this.readFromFirestore()
+  },
+  mounted() {
+    console.log(this.$store);
+  },
+
+  methods: {
+
+  },
+  async created () {
+
   }
 }
 </script>
 
-<style >
-
-
-.events{
-  display: flex;
-  flex-wrap: wrap;
-}
+<style lang="scss">
+  @import "../assets/scss/index";
 </style>
