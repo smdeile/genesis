@@ -1,0 +1,22 @@
+.events{
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 24px;
+  max-width: 380px;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 18px;
+    max-width: 778px;
+  }
+  @media screen and (min-width: 900px) {
+    grid-column-gap: 24px;
+    max-width: 784px;
+  }
+  @media screen and (min-width: 120px) {
+    grid-template-columns: 380px 380px 380px;
+    max-width: 100%;
+  }
+}

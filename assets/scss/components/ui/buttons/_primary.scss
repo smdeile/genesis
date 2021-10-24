@@ -2,11 +2,11 @@
 .btn-primary {
   @include block(0,8px 16px,inline-flex);
   @include flex(row, center, center);
-  @include size(auto);
+  @include size(180px, 51px);
   @include color($primary, $white);
-  @include font-montserrat(700, 16px, 1.5);
+  @include font-montserrat(400, 16px, 1.5);
   @include transition(all, 190ms, ease);
-  border-radius: 8px;
+  border-radius: 0px;
   text-decoration: none;
   text-transform: none;
   text-align: center;
