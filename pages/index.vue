@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { doc, setDoc } from 'firebase/firestore'
+import Events from '../components/Events/Events'
 import Header from '../components/header/Header'
 import PopupLogin from '../components/parts/popups/login/PopupLogin'
 import Events from '../components/Events/Events';
