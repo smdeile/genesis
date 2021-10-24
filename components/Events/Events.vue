@@ -9,6 +9,7 @@
         <event-card></event-card>
         <event-card></event-card>
       </div>
+
     </div>
   </section>
 

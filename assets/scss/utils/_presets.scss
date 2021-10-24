@@ -13,3 +13,15 @@ body {
   @include size();
   max-width: 1160px;
 }
+
+.app-title{
+  display: block;
+  margin: 40px auto;
+  h1{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: block;
+    font-weight: 500;
+  }
+}
