@@ -1,6 +1,6 @@
 <template>
   <div v-if="typeof card !== 'undefined'" class="event-card">
-    <div class="event-card__img">
+    <div class="event-card__img" @click="runToPage(card.id)">
       <img :src="cardImg"
            :alt="card.id"
       />
@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     cardImg() {
-      return this.card.images[0].url
+      return this.card.images[2].url
     },
     cardInfo() {
       if (typeof this.card.info !== 'undefined') {

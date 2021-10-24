@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="site-logo">Fast Events</a>
+  <div :href="href" class="site-logo">Fast Events</div>
 </template>
 
 <script>
