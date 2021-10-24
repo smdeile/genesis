@@ -2,7 +2,7 @@
   <div id="login-popup" class="popup-login">
     <div class="popup-login-box">
       <div class="popup-login-box_close" @click="onClose">X</div>
-      <h2 class="popup-login__title">{{ $t("login") }}</h2>
+      <h2 class="popup-login__title">{{$t('registration')}}</h2>
       <InputDefault id="login-email"
                     v-model="mail"
                     name="login-email"
@@ -19,7 +19,15 @@
                     label="Password"
                     message="Pass must be longer than 5 chars."
       />
-      <button class="btn-primary popup-submit" @click="onLogin">Submit</button>
+      <InputDefault id="login-password-rep"
+                    v-model="repPassw"  
+                    name="login-password"
+                    type="password"
+                    placeholder="Repeat your password..."
+                    label="Password"
+                    message="Pass must be longer than 5 chars."
+      />
+      <button class="btn-primary popup-submit" @click="onRegister">Submit</button>
     </div>
   </div>
 </template>
@@ -35,26 +43,27 @@
     data () {
       return {
         mail: '',
-        password: ''
+        password: '',
+        repPassw: ''
       }
     },
     methods: {
       onClose () {
-        this.$store.commit('IS_POPUP_SIGNIN',false)
+        this.$store.commit('IS_POPUP_SIGNUP',false)
       },
-      async onLogin () {
-        const data = await this.$store.dispatch('SIGNIN_USER', { mail: this.mail, password: this.password })
-        this.$store.commit('IS_POPUP_SIGNIN',false)
-        if (data && data.user) {
-          this.$store.commit('LOGGED_USER', {
+      async onRegister () {
+        if(this.password === this.repPassw) {
+          console.log(' this.mail',  this.mail, this.password);
+          const data = await this.$store.dispatch('CREATE_USER', { mail: this.mail, password: this.password })
+          console.log('11111111111111111111', data );
+          if (data && data.user) {
+            this.$store.commit('IS_POPUP_SIGNUP',false)
+            this.$store.commit('LOGGED_USER', {
             uid: data.user.uid,
             mail: data.user.email
           })
-          console.log('data.user', data.user);
+          }
         }
-
-
-        console.log('44444444444444', data);
       }
     }
   }

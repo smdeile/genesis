@@ -29,7 +29,6 @@ export default {
   },
   mounted() {
     this.getCards(this.$store.state.events)
-    console.log('cards: ', this.cards);
   },
   methods: {
     getCards(cardStore) {

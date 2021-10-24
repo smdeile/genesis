@@ -5,6 +5,9 @@
            :type="type"
            :name="name"
            :placeholder="placeholder"
+           :value="myValue"
+           @input="onChange($event)"
+           
     />
     <div class="mess-error">{{ message }}</div>
   </div>
@@ -13,6 +16,11 @@
 <script>
   export default {
     name: 'InputDefault',
+    data() {
+      return {
+        myValue: this.value
+      }
+    },
     props: {
       label: String,
       id: String,
@@ -21,8 +29,20 @@
         type: String,
         default: 'text',
       },
+      value: {
+        type: String,
+        default: ''
+      },
       placeholder: String,
       message: String,
+    },
+    methods:{
+      onChange (e) {
+        this.myValue = e.target.value
+        this.$emit(
+          'input', this.myValue 
+          )
+      }
     }
   }
 </script>
