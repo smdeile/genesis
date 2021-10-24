@@ -1,16 +1,21 @@
 <template>
   <div id="#app">
     <Header />
+    <Events />
   </div>
 </template>
 
 <script>
 import { doc, setDoc } from 'firebase/firestore'
 import Header from '../components/header/Header'
+import PopupLogin from '../components/parts/popups/login/PopupLogin'
+import Events from '../components/Events/Events';
 
 export default {
   components: {
-    Header
+    Events,
+    Header,
+    PopupLogin,
   },
   async created () {
     this.writeToFirestore(),

@@ -1,0 +1,21 @@
+@import "../../../../assets/scss/utils";
+
+.input-default {
+  @include block(0 auto,0,block);
+  @include size();
+  input {
+    @include block(0, 7px 12px 7px 16px ,flex);
+    @include size();
+    @include flex(row, flex-start, center);
+    @extend %input-default;
+    &:focus {
+      @include border($primary);
+    }
+  }
+  .mess-error {
+    @include font-montserrat(400, 12px, 1.41);
+    @include block(0, 2px 16px, inline-flex);
+    color: $danger;
+    opacity: 0;
+  }
+}
